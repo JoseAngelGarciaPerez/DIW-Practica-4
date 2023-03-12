@@ -1,0 +1,433 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <title>PROFANE SABBATH</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <link href="../css/estilo.css" rel="stylesheet" type="text/css">
+    <link rel="icon" type="image/x-icon" href="../imagenes/UNSPEAKABLEDOOR.webp">
+
+    <style>
+        body {
+            background-image: url(../imagenes/fondo1.jpg);
+        }
+
+        .p-integrantes {
+            padding-left: 4rem;
+            padding-right: 4rem;
+        }
+
+
+        :root {
+            --card-height: 300px;
+            --card-width: calc(var(--card-height) / 1.5);
+        }
+
+        .navbar-nav>.nav-item>a.nav-link {
+            color: white;
+        }
+
+        .card {
+            width: var(--card-width);
+            height: var(--card-height);
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0 36px;
+            perspective: 2500px;
+            margin: 0 50px;
+            background-color: rgba(0, 0, 0, 0);
+            border: none;
+        }
+
+        .cover-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border: 3px solid white;
+        }
+
+        .wrapper {
+            transition: all 0.5s;
+            position: absolute;
+            width: 100%;
+            z-index: -1;
+        }
+
+        .card:hover .wrapper {
+            transform: perspective(900px) translateY(-5%) rotateX(25deg) translateZ(0);
+            box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
+            -webkit-box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
+            -moz-box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
+        }
+
+        .wrapper::before,
+        .wrapper::after {
+            content: "";
+            opacity: 0;
+            width: 100%;
+            height: 80px;
+            transition: all 0.5s;
+            position: absolute;
+            left: 0;
+        }
+
+        .wrapper::before {
+            top: 0;
+            height: 100%;
+            background-image: linear-gradient(to top,
+                    transparent 46%,
+                    rgba(12, 13, 19, 0.5) 68%,
+                    rgba(12, 13, 19) 97%);
+        }
+
+        .wrapper::after {
+            bottom: 0;
+            opacity: 1;
+            background-image: linear-gradient(to bottom,
+                    transparent 46%,
+                    rgba(12, 13, 19, 0.5) 68%,
+                    rgba(12, 13, 19) 97%);
+        }
+
+        .card:hover .wrapper::before,
+        .wrapper::after {
+            opacity: 1;
+        }
+
+        .card:hover .wrapper::after {
+            height: 120px;
+        }
+
+        .title {
+            margin-top: 3rem;
+            width: 100%;
+            transition: transform 0.5s;
+        }
+
+        .card:hover .title {
+            transform: translate3d(0%, -50px, 100px);
+        }
+
+        .character {
+            width: 100%;
+            opacity: 0;
+            transition: all 0.5s;
+            position: absolute;
+            z-index: -1;
+        }
+
+        .card:hover .character {
+            opacity: 1;
+            transform: translate3d(0%, -30%, 100px);
+        }
+
+        /* Smaller than small */
+        @media(min-width: 0px) {
+            .card-carousel {
+                margin-left: 30%;
+            }
+        }
+
+        /* // Small devices (landscape phones, 576px and up) */
+        @media (min-width: 576px) {
+            .card-carousel {
+                margin-left: 30%;
+            }
+        }
+
+        /* // Medium devices (tablets, 768px and up) */
+        @media (min-width: 768px) {
+            .card-carousel {
+                margin-left: 40%;
+            }
+        }
+
+        /* // Large devices (desktops, 992px and up) */
+        @media (min-width: 992px) {
+            .card-carousel {
+                margin-left: 43%;
+            }
+        }
+
+        /* // X-Large devices (large desktops, 1200px and up) */
+        @media (min-width: 1200px) {
+            .card-carousel {
+                margin-left: 43%;
+            }
+        }
+
+        /* // XX-Large devices (larger desktops, 1400px and up) */
+        @media (min-width: 1400px) {
+            .card-carousel {
+                margin-left: 43%;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-light" style="background-color: rgb(78, 10, 134);">
+            <div class="container">
+                <a class="navbar-brand" href="./inicio.html">
+                    <img src="../imagenes/UNSPEAKABLE.webp" width="30px" height="30px" class="d-inline-block align-top">
+                    <b>PROFANE SABBATH</b>
+                </a>
+                <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse align-left" id="collapsibleNavId">
+                    <ul class="navbar-nav me-auto mt-2 mt-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" href="./inicio.html" aria-current="page">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="./sobreBanda.html" aria-current="page">Sobre la banda</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./discos.html" aria-current="page">Discos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./noticias.html" aria-current="page">Noticias</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./contacto.html" aria-current="page">Contacto</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Carousel -->
+        <h1 style="text-align: center; color: red; padding-top: 2rem;">Sobre la Banda</h1>
+        <h2 style="text-align: center; color: red; padding-top: 2rem;">Integrantes</h2>
+        <div class="carousel-div">
+            <div class="carousel-overlay">
+                <div class="row">
+                    <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner text-center">
+                            <div class="carousel-item active" data-bs-interval="3000">
+                                <div style="padding-top: 2rem;">
+                                    <a href="#" target="_blank">
+                                        <div class="card card-carousel">
+                                            <div class="wrapper">
+                                                <img src="../imagenes/grupo-carousel/grupo1.jpg" class="cover-image" />
+                                            </div>
+                                            <img src="../imagenes/grupo-carousel/grupo1-2.jpg" class="character" />
+                                        </div>
+                                    </a>
+                                    <h4 style="color: red;">Gary Miller</h4>
+                                        <p style="color:white;">Cantante</p>
+                                        <p class="p-integrantes" style="color: darkgrey;">Gary Miller, el cantante de la
+                                            banda, nació
+                                            y creció en la ciudad de Liverpool, Inglaterra. </p>
+                                        <p class="p-integrantes" style="color: darkgrey;">Desde joven, Gary supo que
+                                            la música era su pasión y comenzó a tocar en bandas locales desde que tenía
+                                            16 años.</p>
+                                        <p class="p-integrantes" style="color: darkgrey;">Sin embargo, no fue hasta que
+                                            se trasladó a
+                                            Los Ángeles que pudo
+                                            dar el salto definitivo. Allí conoció a Amy Martin, una talentosa bajista y
+                                            cantante originaria de Nueva York.</p>
+                                </div>
+                            </div>
+                            <div class="carousel-item" data-bs-interval="3000">
+                                <div style="padding-top: 2rem;">
+                                    <a href="#" target="_blank">
+                                        <div class="card card-carousel">
+                                            <div class="wrapper">
+                                                <img src="../imagenes/grupo-carousel/grupo2.jpg" class="cover-image" />
+                                            </div>
+                                            <img src="../imagenes/grupo-carousel/grupo2-2.jpg" class="character" />
+                                        </div>
+                                    </a>
+                                    <h4 style="color: red;">Amy Martin</h4>
+                                        <p style="color:white;">Cantante/Bajo</p>
+                                        <p class="p-integrantes" style="color: darkgrey;">Amy Martin había comenzado a
+                                            tocar el bajo cuando
+                                            tenía 13 años y rápidamente se convirtió en una figura influyente en la
+                                            escena underground de Nueva York.</p>
+                                        <p class="p-integrantes" style="color: darkgrey;">Su habilidad en el bajo y su
+                                            poderosa voz
+                                            llamaron la atención de Gary, y rápidamente formaron una conexión musical y
+                                            personal.</p>
+                                </div>
+                            </div>
+                            <div class="carousel-item" data-bs-interval="3000">
+                                <div style="padding-top: 2rem;">
+                                    <a href="#" target="_blank">
+                                        <div class="card card-carousel">
+                                            <div class="wrapper">
+                                                <img src="../imagenes/grupo-carousel/grupo3.jpg" class="cover-image" />
+                                            </div>
+                                            <img src="../imagenes/grupo-carousel/grupo3-2.jpg" class="character" />
+                                        </div>
+                                    </a>
+                                    <h4 style="color: red;">John Ward</h4>
+                                        <p style="color:white;">Guitarra</p>
+                                        <p class="p-integrantes" style="color: darkgrey;">John Ward, el guitarrista de
+                                            la banda, se unió a
+                                            Prophane Sabbath después de que Gary y Amy le pidieran que tocara en su
+                                            primer concierto.
+                                        </p>
+                                        <p class="p-integrantes" style="color: darkgrey;">John era un virtuoso de la
+                                            guitarra, con una
+                                            habilidad
+                                            técnica impresionante y un enfoque único en el sonido.
+                                        </p>
+                                        <p class="p-integrantes" style="color: darkgrey;">Desde su
+                                            incorporación, John ha sido un miembro clave de la banda, contribuyendo con
+                                            su habilidad en la guitarra y su creatividad en la composición.
+                                        </p>
+                                </div>
+                            </div>
+                            <div class="carousel-item" data-bs-interval="3000">
+                                <div style="padding-top: 2rem;">
+                                    <a href="#" target="_blank">
+                                        <div class="card card-carousel">
+                                            <div class="wrapper">
+                                                <img src="../imagenes/grupo-carousel/grupo4.jpg" class="cover-image" />
+                                            </div>
+                                            <img src="../imagenes/grupo-carousel/grupo4-2.jpg" class="character" />
+                                        </div>
+                                    </a>
+                                    <h4 style="color: red;">Juan García</h4>
+                                        <p style="color:white;">Batería</p>
+                                        <p class="p-integrantes" style="color: darkgrey;">Juan García, el batería de
+                                            Prophane Sabbath, se unió
+                                            a la banda poco después de que se formara.</p>
+                                        <p class="p-integrantes" style="color: darkgrey;">Juan había tocado en varias
+                                            bandas locales en su ciudad natal de Ciudad de México, pero siempre había
+                                            soñado con tocar en una banda de rock internacional.</p>
+                                        <p class="p-integrantes" style="color: darkgrey;">Su estilo de batería
+                                            poderoso y su creatividad rítmica hicieron que se destacara inmediatamente
+                                            en la banda.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Imagenes -->
+        <h2 style="text-align: center; color: red; padding-top: 2rem;">Historia de la banda</h2>
+        <div class="row">
+            <div class="col-12 col-sm-12 col-md-6">
+                <div style="padding: 5rem; background-color: rgba(12, 13, 19, 0.5);">
+                    <p style="color: white;">La historia de Prophane
+                        Sabbath comenzó en el año 2005, cuando Gary, Amy y John se encontraron en Los Ángeles. Los tres
+                        habían estado tocando en diferentes bandas, pero se dieron cuenta de que juntos podían crear
+                        algo
+                        realmente especial. En el verano de ese mismo año, la banda comenzó a tocar en pequeños bares y
+                        clubes de Los Ángeles, con Juan uniéndose a la banda poco después.</p>
+                    <p style="color: white;">A medida que la banda
+                        comenzó a tocar más y más, comenzaron a llamar la atención de la industria de
+                        la música. Fue entonces cuando firmaron su primer contrato discográfico con una importante
+                        discográfica. El álbum debut de la banda, "Prophane Sabbath", se lanzó en 2007 y rápidamente se
+                        convirtió en un éxito mundial.</p>
+                    <p style="color: white;">El éxito de Prophane
+                        Sabbath no se detuvo ahí. La banda continuó lanzando álbumes aclamados por la
+                        crítica y ganando seguidores en todo el mundo. Sus giras mundiales se convirtieron en eventos
+                        épicos, con la banda tocando en los estadios más grandes del mundo y atrayendo a multitudes
+                        masivas
+                        de fans.</p>
+                    <p style="color: white;">Prophane Sabbath se
+                        convirtió en una de las bandas más importantes e influyentes del rock moderno,
+                        inspirando a generaciones de músicos y dejando una huella duradera en la historia de la música.
+                    </p>
+                </div>
+
+            </div>
+            <div class="col-12 col-sm-12 col-md-6">
+                <img src="../imagenes/banda.jpg" style="margin-right: 3rem; margin-top: 3rem;  width: 93% ;border-width: 3px;
+                border-style: solid;
+                border-image: 
+                  linear-gradient(
+                    to bottom, 
+                    red, 
+                    rgba(0, 0, 0, 0)
+                  ) 1 100%;">
+            </div>
+        </div>
+
+    </main>
+
+    <footer>
+        <div class="container-fluid" id="footer" style="padding-top: 2rem;">
+            <div class="row">
+                <div class="col-6">
+                    <p class="lead" style="padding-top: 2rem; text-align: left;">Nuestras redes sociales</p>
+                    <div class="row">
+                        <div class="col-12">
+                            <a
+                                style="background: url(../imagenes/facebook-icon.svg); height: 50px; width: 50px; display: inline-flex; margin-right: 2rem;"></a>
+                            <a
+                                style="background: url(../imagenes/youtube-icon.svg); height: 50px; width: 50px; display: inline-flex; margin-right: 2rem;"></a>
+                            <a
+                                style="background: url(../imagenes/pinterest-icon.svg); height: 50px; width: 50px; display: inline-flex; margin-right: 2rem;"></a>
+                            <a
+                                style="background: url(../imagenes/tiktok-icon.svg); height: 50px; width: 50px; display: inline-flex; margin-right: 2rem;"></a>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-6">
+                    <ul style="list-style: none; text-align: right; padding-top: 2rem;">
+                        <li>
+                            <a href="#">INICIO</a>
+                        </li>
+
+                        <li>
+                            <a href="#">SOBRE LA BANDA</a>
+                        </li>
+
+                        <li>
+                            <a href="#">DISCOS</a>
+                        </li>
+
+                        <li>
+                            <a href="#">CONTACTO</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row" style="text-align: center;">
+                <p><b>José Ángel García Pérez - 2ºDAW - ©2023</b></p>
+            </div>
+        </div>
+    </footer>
+    <!-- Bootstrap JavaScript Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
+        </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+        integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
+        </script>
+</body>
+
+</html>

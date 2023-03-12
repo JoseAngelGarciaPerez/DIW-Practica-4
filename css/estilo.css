@@ -1,0 +1,168 @@
+/* FUENTES */
+@font-face {
+  font-family: "ZeldaDX";
+  src: url(../fuentes/zeldadxt.ttf) format("truetype");
+}
+
+/* TEXTO */
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+a,
+::placeholder,
+label,
+.btn {
+  font-family: 'ZeldaDX';
+}
+
+.navbar-nav>.nav-item>a.nav-link.active {
+  color: red;
+}
+
+#particion {
+  background: linear-gradient(180deg, rgb(0, 0, 0) 50%, rgb(255, 0, 0, 0) 100%);
+}
+
+#footer {
+  background: linear-gradient(180deg, rgb(0, 0, 0, 0) 0%, rgb(255, 0, 0, 1) 30%);
+}
+
+.gradiente-lineal {
+  border-width: 5px;
+  border-style: solid;
+  border-image:
+    linear-gradient(to bottom,
+      red,
+      rgba(0, 0, 0, 0)) 1 100%;
+
+}
+
+.btn-primary {
+  background-color: rgb(78, 10, 134) !important;
+  border-color: rgb(43, 12, 69) !important;
+}
+
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active,
+.btn-primary.active,
+.open>.dropdown-toggle.btn-primary {
+  background-color: black !important;
+  border-color: rgb(142, 0, 0) !important;
+  color: red !important;
+}
+
+.form-check-input:checked {
+  background-color: rgb(78, 10, 134) !important;
+  border-color: rgb(37, 12, 58) !important;
+}
+
+
+/* Carousel */
+/* .carousel-div
+{
+    background-image: url(./imagenes/client-banner.jpg); 
+} */
+
+.carousel-overlay {
+  background-color: rgba(32, 32, 32, 0.9);
+}
+
+.carousel {
+  margin-bottom: 4rem;
+}
+
+.carousel-caption {
+  bottom: 3rem;
+  z-index: 10;
+}
+
+
+
+/* Smaller than small */
+@media(min-width: 0px) {
+  .card-carousel {
+    margin-left: 25rem;
+  }
+  .card-img {
+
+    width: 80% !important;
+  }
+  .carousel-item {
+    height: 52rem;
+  }
+}
+
+/* // Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+  .card-carousel {
+    margin-left: 25rem;
+  }
+  .card-img {
+
+    width: 80% !important;
+  }
+  .carousel-item {
+    height: 46rem;
+  }
+}
+
+/* // Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  .card-carousel {
+    margin-left: 25rem;
+  }
+  .card-img {
+
+    width: 100%;
+  }
+  .carousel-item {
+    height: 42rem;
+  }
+}
+
+/* // Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  .card-carousel {
+    margin-left: 25rem;
+  }
+  .card-img {
+
+    width: 100%;
+  }
+  .carousel-item {
+    height: 39rem;
+  }
+}
+
+/* // X-Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  .card-carousel {
+    margin-left: 25rem;
+  }
+  .card-img {
+
+    width: 100%;
+  }
+  .carousel-item {
+    height: 36rem;
+  }
+}
+
+/* // XX-Large devices (larger desktops, 1400px and up) */
+@media (min-width: 1400px) {
+  .card-carousel {
+    margin-left: 25rem;
+  }
+
+  .card-img {
+
+    width: 100%;
+  }
+  .carousel-item {
+    height: 36rem;
+  }
+}

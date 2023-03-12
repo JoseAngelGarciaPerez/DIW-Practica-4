@@ -1,0 +1,276 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <title>PROFANE SABBATH</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <link href="../css/estilo.css" rel="stylesheet" type="text/css">
+    <link rel="icon" type="image/x-icon" href="../imagenes/UNSPEAKABLEDOOR.webp">
+
+    <style>
+        body {
+
+            background-image: url(../imagenes/fondo1.jpg);
+
+        }
+
+        :root {
+            --card-height: 300px;
+            --card-width: calc(var(--card-height) / 1.5);
+        }
+
+        .navbar-nav>.nav-item>a.nav-link {
+            color: white;
+        }
+
+        .card {
+            width: var(--card-width);
+            height: var(--card-height);
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0 36px;
+            perspective: 2500px;
+            margin: 0 50px;
+            background-color:rgba(0, 0, 0, 0);
+            border: none;
+        }
+
+        .cover-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border: 3px solid white;
+        }
+
+        .wrapper {
+            transition: all 0.5s;
+            position: absolute;
+            width: 100%;
+            z-index: -1;
+        }
+
+        .card:hover .wrapper {
+            transform: perspective(900px) translateY(-5%) rotateX(25deg) translateZ(0);
+            box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
+            -webkit-box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
+            -moz-box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
+        }
+
+        .wrapper::before,
+        .wrapper::after {
+            content: "";
+            opacity: 0;
+            width: 100%;
+            height: 80px;
+            transition: all 0.5s;
+            position: absolute;
+            left: 0;
+        }
+
+        .wrapper::before {
+            top: 0;
+            height: 100%;
+            background-image: linear-gradient(to top,
+                    transparent 46%,
+                    rgba(12, 13, 19, 0.5) 68%,
+                    rgba(12, 13, 19) 97%);
+        }
+
+        .wrapper::after {
+            bottom: 0;
+            opacity: 1;
+            background-image: linear-gradient(to bottom,
+                    transparent 46%,
+                    rgba(12, 13, 19, 0.5) 68%,
+                    rgba(12, 13, 19) 97%);
+        }
+
+        .card:hover .wrapper::before,
+        .wrapper::after {
+            opacity: 1;
+        }
+
+        .card:hover .wrapper::after {
+            height: 120px;
+        }
+
+        .title {
+            margin-top: 3rem;
+            width: 100%;
+            transition: transform 0.5s;
+        }
+
+        .card:hover .title {
+            transform: translate3d(0%, -50px, 100px);
+        }
+
+        .character {
+            width: 100%;
+            opacity: 0;
+            transition: all 0.5s;
+            position: absolute;
+            z-index: -1;
+        }
+
+        .card:hover .character {
+            opacity: 1;
+            transform: translate3d(0%, -30%, 100px);
+        }
+
+        .col-12
+        {
+            align-items: center;
+        }
+    </style>
+
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-light" style="background-color: rgb(78, 10, 134);">
+            <div class="container">
+                <a class="navbar-brand" href="./inicio.html">
+                    <img src="../imagenes/UNSPEAKABLE.webp" width="30px" height="30px" class="d-inline-block align-top">
+                    <b>PROFANE SABBATH</b>
+                </a>
+                <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse align-left" id="collapsibleNavId">
+                    <ul class="navbar-nav me-auto mt-2 mt-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" href="./inicio.html" aria-current="page">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./sobreBanda.html" aria-current="page">Sobre la banda</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="./discos.html" aria-current="page">Discos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./noticias.html" aria-current="page">Noticias</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./contacto.html" aria-current="page">Contacto</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <h1 style="text-align: center; color: red; padding-top: 3rem;">Discos</h1>
+        <div class="row" style="margin-top: 4rem;">
+            <div class="col-12 col-sm-6 col-md-3">
+                <a href="#" target="_blank">
+                    <div class="card">
+                      <div class="wrapper">
+                        <img src="../imagenes/cards/card1/fondo.jpg" class="cover-image" />
+                      </div>
+                      <img src="../imagenes/cards/card1/titulo.png" class="title" />
+                      <img src="../imagenes/cards/card1/personaje.png" class="character" />
+                    </div>
+                  </a>
+            </div>
+            <div class="col-12 col-sm-6 col-md-3">
+                <a href="#" target="_blank">
+                    <div class="card">
+                      <div class="wrapper">
+                        <img src="../imagenes/cards/card2/fondo.jpg" class="cover-image" />
+                      </div>
+                      <img src="../imagenes/cards/card2/titulo.png" class="title" />
+                      <img src="../imagenes/cards/card2/personaje.png" class="character" />
+                    </div>
+                  </a>
+            </div>
+            <div class="col-12 col-sm-6 col-md-3">
+                <a href="#" target="_blank">
+                    <div class="card">
+                      <div class="wrapper">
+                        <img src="../imagenes/cards/card3/fondo.jpg" class="cover-image" />
+                      </div>
+                      <img src="../imagenes/cards/card3/titulo.png" class="title" />
+                      <img src="../imagenes/cards/card3/personaje.png" class="character" />
+                    </div>
+                  </a>
+            </div>
+            <div class="col-12 col-sm-6 col-md-3">
+                <a href="#" target="_blank">
+                    <div class="card">
+                      <div class="wrapper">
+                        <img src="../imagenes/cards/card4/fondo.jpg" class="cover-image" />
+                      </div>
+                      <img src="../imagenes/cards/card4/titulo.png" class="title" />
+                      <img src="../imagenes/cards/card4/personaje.png" class="character" />
+                    </div>
+                  </a>
+            </div>
+
+        </div>
+
+    </main>
+    <footer>
+        <div class="container-fluid" id="footer" style="padding-top: 2rem;">
+            <div class="row">
+                <div class="col-6">
+                    <p class="lead" style="padding-top: 2rem; text-align: left;">Nuestras redes sociales</p>
+                    <div class="row">
+                        <div class="col-12">
+                            <a
+                                style="background: url(../imagenes/facebook-icon.svg); height: 50px; width: 50px; display: inline-flex; margin-right: 2rem;"></a>
+                            <a
+                                style="background: url(../imagenes/youtube-icon.svg); height: 50px; width: 50px; display: inline-flex; margin-right: 2rem;"></a>
+                            <a
+                                style="background: url(../imagenes/pinterest-icon.svg); height: 50px; width: 50px; display: inline-flex; margin-right: 2rem;"></a>
+                            <a
+                                style="background: url(../imagenes/tiktok-icon.svg); height: 50px; width: 50px; display: inline-flex; margin-right: 2rem;"></a>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-6">
+                    <ul style="list-style: none; text-align: right; padding-top: 2rem;">
+                        <li>
+                            <a href="#">INICIO</a>
+                        </li>
+
+                        <li>
+                            <a href="#">SOBRE LA BANDA</a>
+                        </li>
+
+                        <li>
+                            <a href="#">DISCOS</a>
+                        </li>
+
+                        <li>
+                            <a href="#">CONTACTO</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row" style="text-align: center;">
+                <p><b>José Ángel García Pérez - 2ºDAW - ©2023</b></p>
+            </div>
+        </div>
+    </footer>
+    <!-- Bootstrap JavaScript Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
+        </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+        integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
+        </script>
+</body>
+
+</html>
