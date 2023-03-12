@@ -60,6 +60,10 @@ label,
   border-color: rgb(37, 12, 58) !important;
 }
 
+.form-label{
+  color: white;
+}
+
 
 /* Carousel */
 /* .carousel-div
